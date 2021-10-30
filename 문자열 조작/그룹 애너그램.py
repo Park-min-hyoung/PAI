@@ -1,28 +1,16 @@
-strs = ["cab","tin","pew","duh","may","ill","buy","bar","max","doc"]
-strs.sort()
-count_strs = []
+strs = ["eat","tea","tan","ate","nat","bat"]
+sort_strs = []
 
 for i, word in enumerate(strs):
-    count_strs.append(''.join(sorted(word)))
+    sort_strs.append(''.join(sorted(word)))
 
-check = [0] * len(strs)
+set_strs = set(sort_strs)
 result = []
-while True:
-    target_word = count_strs[0]
+for target in set_strs:
     array = []
-    for i in range(len(strs)):
-        if not check[i]:
-            target_word = count_strs[i]
-            break
-
-    for i in range(len(strs)):
-        if target_word == count_strs[i]:
-            array.append(strs[i])
-            check[i] = 1
-
+    for idx, value in enumerate(sort_strs):
+        if target == value:
+            array.append(strs[idx])
     result.append(array)
-
-    if sum(check) >= len(strs):
-        break
 
 print(result)
