@@ -1,12 +1,4 @@
-from typing import List
-from collections import deque
-
-c = []
-a = c
-
-a.append(5)
-print(a, c)
-
+#234
 
 # Definition for singly-linked list.
 # class ListNode:
