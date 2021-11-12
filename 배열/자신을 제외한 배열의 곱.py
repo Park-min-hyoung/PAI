@@ -1,30 +1,19 @@
 #238
-nums = [0, 4, 0]
+nums = [1, 2, 3, 4]
 
-all_value = 1
-zero_count = 0
-for num in nums:
-    if num == 0:
-        zero_count += 1
-        continue
-    all_value *= num
+out = []
+p = 1
+for i in range(len(nums)):
+    out.append(p)
+    p *= nums[i]
 
-# 원소가 모두 0일때
-if len(nums) == zero_count:
-    print(nums)
-    exit()
+p = 1
+for i in range(len(nums) - 1, -1, -1):
+    out[i] *= p
+    p *= nums[i]
 
-result = []
-for num in nums:
-    if zero_count == 0:
-        result.append(all_value // num)
-    else:
-        if num != 0:
-            result.append(0)
-        else:
-            if zero_count == 1:
-                result.append(all_value)
-            else:
-                result.append(0)
+print(out)
 
-print(result)
+# 틀렸음
+'''
+1. 자기 자신을 제외한 왼쪽 곱셈 리스트와 오른쪽 곱셈 리스트를 만든 후 두 배열의 동일한 index끼리 곱해주면 된다.'''
