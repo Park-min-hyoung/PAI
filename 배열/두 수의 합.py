@@ -2,17 +2,22 @@
 nums = [2,7,11,15]
 target = 9
 
+# 조회 구조 개선
+'''dict_map = {}
+for i, num in enumerate(nums):
+    if target - num in dict_map:
+        return [i, dict_map[target - num]]
+    dict_map[num] = i'''
+
 # 첫 번째 수를 뺀 결과 키 조회(집합사용)(틀렸음)
 # key와 value를 뒤집음으로써 index를 value로 사용(어차피 출력결과는 index 번호이므로...)
-# 여기 책 개념부터 훑어 보기
-'''dict = {}
-for i, num in enumerate(nums):
-    dict[num] = i
+'''dict_map = {}
+for i, value in enumerate(nums):
+    dict_map[value] = i
 
-for i, num in enumerate(nums):
-    if target - num in dict and i != dict[target - num]:
-        print([i, dict[target - num]])
-        exit()'''
+for i, value in enumerate(nums):
+    if target - value in dict_map and i != dict_map[target - value]:
+        return [i, dict_map[target - value]]'''
 
 #in 사용(틀렸음)
 '''for i, n in enumerate(nums):
