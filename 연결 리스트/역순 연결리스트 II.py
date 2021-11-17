@@ -5,7 +5,28 @@
 #     def __init__(self, val=0, next=None):
 #         self.val = val
 #         self.next = next
-class Solution:
+
+# 반복 구조로 노드 뒤집기
+'''class Solution:
+    def reverseBetween(self, head: ListNode, m: int, n: int) -> ListNode:
+        if not head or m == n:
+            return head
+
+        root = start = ListNode(None)
+        start.next = head
+
+        # start, end 지정
+        for _ in range(m - 1):
+            start = start.next
+        end = start.next
+
+        for _ in range(n - m):
+            tmp, start.next, end.next = start.next, end.next, end.next.next
+            start.next.next = tmp
+
+        return root.next'''
+
+'''class Solution:
     def reverseBetween(self, head: Optional[ListNode], left: int, right: int) -> Optional[ListNode]:
         if right - left == 0:
             return head
@@ -35,4 +56,4 @@ class Solution:
         while left_space != None:
             result, result.next, left_space = left_space, result, left_space.next
 
-        return result
+        return result'''
