@@ -2,27 +2,26 @@
 
 # 전가산기 구현
 '''class Solution:
-    # 두 연결 리스트의 덧셈
     def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
-        root = head = ListNode(0)
+        root = head = ListNode(None)
 
         carry = 0
         while l1 or l2 or carry:
             sum = 0
-
+            # 두 입력값의 합 계산
             if l1:
                 sum += l1.val
                 l1 = l1.next
-
             if l2:
                 sum += l2.val
                 l2 = l2.next
 
+            # 몫(자리올림수)과 나머지(값) 계산
             carry, val = divmod(sum + carry, 10)
             head.next = ListNode(val)
             head = head.next
 
-        return root.nex'''
+        return root.next'''
 
 # 자료형 변환 이용
 '''class Solution:
@@ -62,3 +61,7 @@
 
         return self.toReversedLinkedList(str(resultStr))'''
 
+# 틀렸음(v)
+'''
+1. 함수 여러개(연결 리스트 뒤집기, 연결 리스트를 파이썬 리스트로, 더해진 값을 연결리스트로)를 사용해서 값을 구하는 방법
+2. 전가산기 구현 방법 사용해서 몫과 나머지를 통해 연결리스트에 하나씩 삽입하는 방법'''
