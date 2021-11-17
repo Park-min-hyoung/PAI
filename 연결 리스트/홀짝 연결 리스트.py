@@ -6,7 +6,8 @@
 #         self.val = val
 #         self.next = next
 
-class Solution:
+# 반복 구조로 홀짝 노드 정리
+'''class Solution:
     def oddEvenList(self, head: Optional[ListNode]) -> Optional[ListNode]:
         odd = head
         even = even_head = head.next
@@ -16,9 +17,9 @@ class Solution:
             odd, even = odd.next, even.next
 
         odd.next = even_head
-        print(head)
+        print(head)'''
 
-class Solution:
+'''class Solution:
     def oddEvenList(self, head: Optional[ListNode]) -> Optional[ListNode]:
         odd = None
         even = None
@@ -34,4 +35,8 @@ class Solution:
         while odd != None:
             result, result.next, odd = odd, result, odd.next
 
-        return result
+        return result'''
+
+# 틀렸음(v)
+'''
+1. 공간 복잡도(1) 읽어보기'''
