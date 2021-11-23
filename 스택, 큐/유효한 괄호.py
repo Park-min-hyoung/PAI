@@ -1,8 +1,8 @@
 #20
 
-s = "(]"
+s = ")["
 stack = [s[0]]
-ch_dict = {'(': 1, ')': 2, '[': 3, ']': 4, '{': 5, '}': 6}
+ch_dict = {'(': 1, ')': 2, '[': 4, ']': 5, '{': 7, '}': 8}
 
 for ch in s[1:]:
     stack.append(ch)
@@ -10,4 +10,4 @@ for ch in s[1:]:
         stack.pop()
         stack.pop()
 
-print(len(stack) == 0)
+print(not len(stack))
