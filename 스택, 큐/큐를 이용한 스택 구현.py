@@ -24,4 +24,4 @@ class MyStack:
         else:
             return False
 
-# 다시 풀이
+# 다시 풀이(v)

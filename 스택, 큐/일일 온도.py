@@ -12,7 +12,7 @@ for i, temp in enumerate(temperatures):
 
 print(result)
 
-# 틀렸음
+# 틀렸음(v)
 '''
 1. 현재 온도를 기준으로 바로 전의 온도(stack[-1])가 낮을 경우 stack에서 이전 온도를 가져와서(stack.pop()) 현재 온도와의 차이를 result에 넣어준다.
 그리고 현재 온도는 stack에 채워준다.'''
