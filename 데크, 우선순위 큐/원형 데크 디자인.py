@@ -58,4 +58,4 @@ class MyCircularDeque:
     def isFull(self) -> bool:
         return self.maxlen == self.k
 
-# 다시 풀이
+# 다시 풀이(x)
