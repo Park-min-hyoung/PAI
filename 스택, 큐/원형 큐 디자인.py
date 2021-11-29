@@ -36,4 +36,4 @@ class MyCircularQueue:
     def isFull(self) -> bool:
         return self.p1 == self.p2 and self.q[self.p1] is not None
 
-# 다시 풀이
+# 다시 풀이(x)

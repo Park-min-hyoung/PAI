@@ -18,4 +18,4 @@ class MyQueue:
     def empty(self) -> bool:
         return len(self.stack) == 0
 
-# 다시 풀이
+# 다시 풀이(x)
