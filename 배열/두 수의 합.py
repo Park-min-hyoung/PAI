@@ -26,7 +26,7 @@ for i, value in enumerate(nums):
     if comp in nums[i + 1:]:
         print([nums.index(n), nums[i + 1:].index(comp) + (i + 1)])'''
 
-#브루트 포스로 계산
+#브루트 포스로 계산()
 '''result = []
 for i in range(len(nums)):
     for j in range(i + 1, len(nums)):
