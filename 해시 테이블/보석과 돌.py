@@ -1,21 +1,28 @@
 import collections
+from collections import Counter
 
 jewels = "aA"
 stones = "aAAbbbb"
+result = 0
 
-stone_dict = collections.defaultdict(int)
+# defaultdict를 이용한 비교 생략
+'''stone_dict = collections.defaultdict(int)
 
 for stone in stones:
     stone_dict[stone] += 1
 
-result = 0
-for key in stone_dict:
-    if key in jewels:
-        result += stone_dict[key]
+for key in jewels:
+    result += stone_dict[key]
+
+print(result)'''
+
+# Counter로 계산 생략
+'''stone = Counter(stones)
+
+for key in jewels:
+    result += stone[key]'''
+
+# 파이썬 다운 방식
+'''print(sum(s in jewels for s in stones))'''
 
 print(result)
-
-# for key, value in jewels_dict.items():
-#     if key in stones:
-#         result += value
-

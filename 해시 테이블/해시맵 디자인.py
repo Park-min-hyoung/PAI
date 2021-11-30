@@ -60,7 +60,7 @@ class MyHashMap:
                 return
             prev, p = p, p.next
 
-# 틀렸음
+# 틀렸음(v)
 '''
 1. put은 해당 index에 연결리스트가 없을때와 있을때로 구분, 있을경우에 새로운 key와 기존 key가 일치하는 경우 업데이트
 없으면 연결리스트 마지막에 추가
