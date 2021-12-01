@@ -1,11 +1,24 @@
-def dfs(x, discoverd):
-    discoverd.append(x)
-    print(x, end=' ')
+# 재귀를 이용한 DFS
+def recursive_dfs(v, discovered=[]):
+    discovered.append(v)
 
-    for v in graph[x]:
-        if v not in discoverd:
-            dfs(v, discoverd)
+    for x in graph[v]:
+        if x not in discovered:
+            recursive_dfs(x, discovered)
 
+    return discovered
+
+def iterative_dfs(v, discovered=[]):
+    stack = [v]
+
+    while stack:
+        x = stack.pop()
+        if x not in discovered:
+            discovered.append(x)
+            for value in graph[x]:
+                stack.append(value)
+
+    return discovered
 
 graph = {
     1: [2, 3, 4],
@@ -16,4 +29,6 @@ graph = {
     6: [],
     7: [3]
 }
-dfs(1, [])
+
+print(recursive_dfs(1))
+print(iterative_dfs(1))
