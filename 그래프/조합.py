@@ -1,26 +1,26 @@
 #77
 
-def dfs(arr):
-    if len(prev_v) == k:
-        result.append(prev_v[:])
+from itertools import combinations
 
-    for num in arr:
-        if prev_v and prev_v[-1] > num:
-            continue
-        next_v = arr[:]
-        next_v.remove(num)
+# DFS로 k개 조합 생성
+def dfs(element, idx, k):
+    if k == 0:
+        result.append(element[:])
+        return
 
-        prev_v.append(num)
-        dfs(next_v)
-        prev_v.pop()
+    for i in range(idx, n + 1):
+        element.append(i)
+
+        dfs(element, i + 1, k - 1)
+        element.pop()
 
 
-n = 1
-k = 1
+n = 4
+k = 2
 
-li = list(x for x in range(1, n + 1))
-prev_v = []
 result = []
+dfs([], 1, k)
 
-dfs(li)
 print(result)
+
+print(list(map(list, combinations(range(1, n + 1), k))))
